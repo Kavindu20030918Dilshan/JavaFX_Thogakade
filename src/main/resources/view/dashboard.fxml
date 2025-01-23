@@ -14,16 +14,21 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="19.0" layoutY="276.0" mnemonicParsing="false" onAction="#btnItemFormOnAction" prefHeight="43.0" prefWidth="170.0" text="Item Form">
+      <Button layoutX="19.0" layoutY="246.0" mnemonicParsing="false" onAction="#btnItemFormOnAction" prefHeight="43.0" prefWidth="170.0" text="Item Form">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="19.0" layoutY="422.0" mnemonicParsing="false" onAction="#btnOrderFormOnAction" prefHeight="43.0" prefWidth="170.0" text="Order Form">
+      <Button layoutX="19.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnOrderFormOnAction" prefHeight="43.0" prefWidth="170.0" text="Order Form">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
       <AnchorPane fx:id="loadFormContent" layoutX="217.0" layoutY="14.0" prefHeight="590.0" prefWidth="627.0" />
+      <Button layoutX="19.0" layoutY="472.0" mnemonicParsing="false" onAction="#btnRegisterFormOnAction" prefHeight="43.0" prefWidth="170.0" text="Register New">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
