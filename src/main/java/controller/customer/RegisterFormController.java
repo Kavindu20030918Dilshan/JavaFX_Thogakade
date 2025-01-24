@@ -7,6 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import model.User;
+import org.jasypt.util.text.BasicTextEncryptor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,7 +31,12 @@ public class RegisterFormController extends Component {
     private TextField txtUsername;
 
     @FXML
-    void btnRegisterOnAction(ActionEvent event)throws SQLException {
+    void btnRegisterOnAction(ActionEvent event)throws SQLException
+    {
+        String key = "#123*5";
+        BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
+        basicTextEncryptor.setPassword(key);
+
         String SQL = "INSERT INTO users (username,email,password) VALUES(?,?,?)";
 
         if (txtPassword.getText().equals(txtPasswordConfirm.getText())){
@@ -42,16 +48,22 @@ public class RegisterFormController extends Component {
             if (resultSet.next()){
                 new Alert(Alert.AlertType.ERROR,"User already registered").show();
             }else{
+
+
+
                 User user = new User(
                         txtUsername.getText(),
                         txtEmail.getText(),
                         txtPassword.getText()
                 );
 
+
+
+
                 PreparedStatement preparedStatement = connection.prepareStatement(SQL);
                 preparedStatement.setString(1,user.getUsername());
                 preparedStatement.setString(2,user.getEmail());
-                preparedStatement.setString(3,user.getPassword());
+                preparedStatement.setString(3,basicTextEncryptor.encrypt(user.getPassword()));
                 preparedStatement.executeUpdate();
             }
 
