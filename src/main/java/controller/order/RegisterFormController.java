@@ -1,4 +1,4 @@
-package controller.customer;
+package controller.order;
 
 import db.DBConnection;
 import javafx.event.ActionEvent;

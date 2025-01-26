@@ -1,4 +1,4 @@
-package controller.customer;
+package controller.order;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
