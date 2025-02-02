@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="613.0" prefWidth="856.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.order.RegisterFormController">
+<AnchorPane prefHeight="613.0" prefWidth="856.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="613.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="269.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="613.0" layoutX="268.0" stroke="BLACK" strokeType="INSIDE" width="592.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="266.6" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />

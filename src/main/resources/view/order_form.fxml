@@ -62,5 +62,10 @@
          </font>
       </Label>
       <JFXTextField fx:id="txtOrderId" layoutX="15.0" layoutY="94.0" prefHeight="34.0" prefWidth="130.0" promptText="Order id" />
+      <JFXButton layoutX="240.0" layoutY="541.0" onAction="#btnCommitOnAction" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #4fabf3;" text="Commit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

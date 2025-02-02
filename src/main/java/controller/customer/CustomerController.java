@@ -5,17 +5,25 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Customer;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerController implements CustomerService {
     @Override
     public boolean addCustomer(Customer customer) {
-        return false;
+       String SQL = "INSERT INTO customer VALUES(?,?,?,?)";
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            PreparedStatement psTm = connection.prepareStatement(SQL);
+            psTm.setObject(1,customer.getId());
+            psTm.setObject(2,customer.getName());
+            psTm.setObject(3,customer.getAddress());
+            psTm.setObject(4,customer.getSalary());
+            return psTm.executeUpdate()>0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
